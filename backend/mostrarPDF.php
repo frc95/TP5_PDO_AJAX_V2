@@ -4,7 +4,7 @@ require "persona.php";
 require "empleado.php";
 require "fabrica.php";
 
-
+header('content-type:application/pdf');
 
 session_start();
 
@@ -52,5 +52,5 @@ $mpdf->WriteHTML('<h2>Listado de Empleados</h2>');
 
 $mpdf->WriteHTML($tabla);
 
-$mpdf->Output();
+$mpdf->Output('mi_pdf.pdf', 'I');
 ?>
