@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 – Formulario Login</title>
+    <script src="./javascript/funciones.js"></script>
+</head>
+<body>
+    <h2>Login</h2>
+
+    <form action="backend/verificarUsuario.php" method="POST">
+        <table align="center" border="0">
+            <tr>
+                <td colspan="2"><h4>Ingreso de credenciales</h4></td>     
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>     
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dni">DNI:</label>
+                </td>
+                <td>
+                    <input type="number" name="dni" id="txtDni" min="1000000" max="55000000" required >
+                    <span style="display: none;" id="spanDni">*</span>
+                </td>   
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="apellido">Apellido:</label>
+                </td> 
+                <td>
+                    <input type="text" name="apellido" id="txtApellido" required>
+                    <span style="display: none;" id="spanApellido">*</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><hr></td>     
+            </tr>
+
+            <tr>
+                <td align="right" colspan="2"><input type="reset" value="Limpiar"></td>     
+            </tr>
+            <tr>
+                <td align="right" colspan="2"><input type="submit" value="Enviar" onclick="AdministrarValidacionesLogin()"></td>     
+            </tr>
+
+
+
+        </table>
+    </form>
+</body>
+</html>
